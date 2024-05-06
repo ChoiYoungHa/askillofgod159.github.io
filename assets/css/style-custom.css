@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'SendBox font bold';
+    src: local('MyLocalFont'), url('../font/SB 어그로OTF B.otf') format('opentype');
+}
+@font-face {
+    font-family: 'SendBox font light';
+    src: local('MyLocalFont'), url('../font/SB 어그로OTF L.otf') format('opentype');
+}
+@font-face {
+    font-family: 'SendBox font medium';
+    src: local('MyLocalFont'), url('../font/SB 어그로OTF M.otf') format('opentype');
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);  /* Start from 20 pixels down */
+        opacity: 0;  /* Start from fully transparent */
+    }
+    to {
+        transform: translateY(0);  /* End at its normal position */
+        opacity: 1;  /* End fully opaque */
+    }
+}
+
+.hero-container h1 {
+    animation: slideUp 1s ease-out forwards;  /* Run animation for 1 second */
+}
+
+.banner {
+    background-color: #F7B731; /* Adjust the color to match the exact yellow from your screenshot */
+    color: #333; /* Color for text */
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+.button-style {
+    padding: 8px;
+    border: 2px solid #333; /* Adds a solid black border */
+    margin: 20px 0; /* Adds some spacing around the paragraph */
+    font-size: 20px; /* Larger font size for visibility */
+}
+
+.progress {
+    background-color: #e9ecef;
+    height: 20px;
+    border-radius: 5px;
+}
+.progress-bar {
+    font-size: 14px;
+    line-height: 20px; /* Aligns text vertically */
+    color: white;
+    text-align: center;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    transition: transform 0.5s ease;
+    transform: translateY(100%);
+}
+.project-card:hover .project-info {
+    transform: translateY(0);
+}
+.project-content {
+    padding: 10px;
+}
+.hexagon {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 90px;
+    height: 86.61px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -28px; /* Adjust this to overlap the card's top edge */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+.blue { background-color: #2c98f0; color: white; }
+.red { background-color: #ec5453; color: white; }
+.yellow { background-color: #f9bf40; color: white; }
+.violet { background-color: #a94cb8; color: white; }
+.mint { background-color: #2ea499; color: white; }
+.navy { background-color: #4054b2; color: white; }
+.card {
+    position: relative;
+    padding-top: 50px; /* Additional padding to account for the overlapping hexagon */
+}
+
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+.card-img-left {
+    width: 150px; /* Adjust size as necessary */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+
